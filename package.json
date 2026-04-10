@@ -1,17 +1,29 @@
 {
-  "name": "lab-event-listeners-in-js",
+  "name": "lab-event-listeners-in",
   "version": "1.0.0",
   "description": "A lab on handling events with JavaScript",
+  "homepage": "https://github.com/daisy-koech/lab-event-listeners-in-js#readme",
+  "bugs": {
+    "url": "https://github.com/daisy-koech/lab-event-listeners-in-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daisy-koech/lab-event-listeners-in-js.git"
+  },
+  "license": "MIT",
+  "author": "Louis Medina",
+  "type": "commonjs",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "jest"
   },
-  "author": "Louis Medina",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.23.0",
-    "jest": "^27.0.0",
+    "jest": "^27.5.1",
     "jsdom": "^22.1.0",
     "mocha-multi": "^1.1.3"
   },
