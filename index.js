@@ -2,27 +2,70 @@
 
 // Function to change the background color when a button is clicked
 function changeBackgroundColor() {
-  // Implement the function to change background color
+  const btn = document.getElementById("changeColorButton");
+  btn.addEventListener("click", function() {
+    console.log("button clicked")
+    document.body.style.backgroundColor = "pink";
+  })
 }
+changeBackgroundColor();
 
 // Function to reset the background color when the body is double-clicked
 function resetBackgroundColor() {
-  // Implement the function to reset background color
+  const btn = document.getElementById("resetColorButton");
+  btn.addEventListener("dblclick", function() {
+    console.log("button double-clicked!")
+    document.body.style.backgroundColor = "white";
+  })
 }
+resetBackgroundColor();
 
 // Capture Keyboard Input
 
 // Function to display the key pressed by the user
-function displayKeyPress(event) {
-  // Implement the function to display key pressed
+// function displayKeyPress (event) {
+//   const keyPress = document.getElementById("keyPressDisplay")
+// keyPress.addEventListener("keydown", function(event){
+//   console.log(event.key);
+//   keyPress.textContent = "Key pressed: " + event.key;
+//   if (event.key === "Enter") {
+//     console.log("Key pressed: ", event.key)
+//   }
+// });
+// }
+// displayKeyPress();
+
+function displayKeyPress() {
+  const keyPress = document.getElementById("keyPressDisplay");
+  document.addEventListener("keydown", function(event){
+    console.log(event.key);
+    keyPress.textContent = "Key pressed: " + event.key;
+    if (event.key === "Enter") {
+      console.log("Enter pressed!")
+    }
+  })
 }
+displayKeyPress();
 
 // Process Text Input
 
 // Function to display user input in real-time
 function displayUserInput() {
-  // Implement the function to display user input
+  const userInput = document.getElementById("textInput");
+  const displayInput = document.getElementById("textInputDisplay");
+
+  userInput.addEventListener("input",function(event) {
+    const value = event.target.value;
+    console.log(value);
+
+    displayInput.textContent = value;
+     
+    // if (value === "Hello world") {
+    //   console.log("Text input: ", value);
+    // }
+  })
 }
+displayUserInput();
 
 // Attach Event Listeners
 function setupEventListeners() {
